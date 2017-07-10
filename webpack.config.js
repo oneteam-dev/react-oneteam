@@ -40,6 +40,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', { loader: 'css-loader', options: { minimize: true } }],
+        include: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]___[hash:base64:4]',
+            },
+          },
+        ],
+        include: path.resolve(__dirname, 'src'),
       },
       {
         test: /\.styl$/,

@@ -10,11 +10,38 @@
       "plugins": ["react-hot-loader/babel"]
     },
     "es": {
-      "plugins": ["transform-object-rest-spread", "transform-class-properties", "./config/babel-plugin-transform-import-extension-styl-to-css"],
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        [
+          "css-modules-transform",
+          {
+            "prepend": ["postcss-simple-vars"],
+            "generateScopedName": "[hash:base64:16]"
+          }
+        ],
+        "./config/babel-plugin-transform-import-extension-styl-to-css"
+      ],
     },
     "commonjs": {
       "presets": ["es2015"],
-      "plugins": ["transform-object-rest-spread", "transform-class-properties", "./config/babel-plugin-transform-import-extension-styl-to-css"],
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        [
+          "css-modules-transform",
+          {
+            "prepend": ["postcss-simple-vars"],
+            "generateScopedName": "[hash:base64:16]",
+            "extractCss": {
+              "dir": "./lib/",
+              "relativeRoot": "./src/",
+              "filename": "[path]/[name].css"
+            }
+          }
+        ],
+        "./config/babel-plugin-transform-import-extension-styl-to-css"
+      ],
     }
   }
 }

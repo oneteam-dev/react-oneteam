@@ -42,11 +42,20 @@ module.exports = {
 
 // app.js
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import React from 'react';
 import { render } from 'react-dom';
-import { Avatar } from 'react-oneteam';
+import { Avatar, Mention } from 'react-oneteam';
+import 'react-oneteam/lib/react-oneteam.css';
 
-render(<Avatar user={user} />, document.getElementById('root'));
+render(
+  <div>
+    <Avatar user={user} />
+    <Mention>Shingo Sato</Mention>
+  </div>,
+  document.getElementById('root')
+);
 ```
 
 ## License
