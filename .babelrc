@@ -16,7 +16,7 @@
         [
           "css-modules-transform",
           {
-            "prepend": ["postcss-simple-vars"],
+            "prepend": ["postcss-simple-vars", "postcss-calc"],
             "generateScopedName": "[hash:base64:16]"
           }
         ],
@@ -31,7 +31,7 @@
         [
           "css-modules-transform",
           {
-            "prepend": ["postcss-simple-vars"],
+            "prepend": ["postcss-simple-vars", "postcss-calc"],
             "generateScopedName": "[hash:base64:16]",
             "extractCss": {
               "dir": "./lib/",

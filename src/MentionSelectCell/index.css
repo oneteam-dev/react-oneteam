@@ -35,7 +35,7 @@ $padding: 10px;
   vertical-align: middle;
   display: inline-block;
   line-height: 12px;
-  padding-left: $avatar-width + $padding;
+  padding-left: calc($avatar-width + $padding);
 }
 
 .name,
