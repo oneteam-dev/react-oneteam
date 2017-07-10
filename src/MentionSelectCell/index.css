@@ -1,0 +1,62 @@
+$cell-height: 40px;
+$avatar-width: 20px;
+$padding: 10px;
+
+.cell {
+  line-height: $cell-height;
+  padding: 0 $padding;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 40px;
+}
+
+.avatar {
+  float: none;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: $padding;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: $avatar-width;
+  height: $avatar-width;
+}
+
+.avatar acronym {
+  line-height: $avatar-width;
+  font-size: 9px;
+}
+
+.text {
+  float: none;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 12px;
+  padding-left: $avatar-width + $padding;
+}
+
+.name,
+.username,
+.email {
+  margin: 0;
+  display: inline-block;
+}
+
+.name {
+  font-size: 13px;
+  color: rgba(0, 0, 0, .8);
+  font-weight: bold;
+}
+
+.username {
+  margin-left: .5em;
+  font-size: 12px;
+  color: rgba(0, 0, 0, .3);
+}
+
+.email {
+  font-size: 11px;
+}

@@ -1,0 +1,7 @@
+.mention {
+  color: #00aeef;
+  cursor: default;
+  display: inline-block;
+  line-height: 1.428571429;
+  text-decoration: none;
+}
