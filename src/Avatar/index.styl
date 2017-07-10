@@ -1,0 +1,82 @@
+$avatar-size = 36px
+$avatar-size-s = 32px
+$avatar-size-t = 28px
+$avatar-size-little = 25px
+$avatar-size-mini = 20px
+$avatar-size-xs = 15px
+$font = 'Helvetica Neue', '.SFNSText-Regular', 'Noto Sans Japanese', 'Helvetica', '游ゴシック', 'YuGothic', 'Meiryo', 'メイリオ', 'Roboto', 'Segoe UI', sans-serif
+
+avatar(size)
+  border-radius: size * .5
+  display: inline-block
+  height: size
+  width: size
+
+.avatar
+  avatar($avatar-size)
+  acronym, .fa
+    line-height: $avatar-size
+    font-size: 17px
+    letter-spacing: -2px
+    text-indent: -2px
+
+.avatar-s, .meta .avatar
+  avatar($avatar-size-s)
+  acronym, .fa
+    line-height: $avatar-size-s
+    font-size: 12px
+    letter-spacing: -1px
+    text-indent: -1px
+
+.avatar-t
+  avatar($avatar-size-t)
+  acronym, .fa
+    line-height: $avatar-size-t
+    font-size: 11px
+    letter-spacing: -1px
+    text-indent: -1px
+
+.avatar-little
+  avatar($avatar-size-little)
+  acronym, .fa
+    line-height: $avatar-size-little
+    font-size: 11px
+    letter-spacing: -1px
+    text-indent: -1px
+    vertical-align: top
+
+.avatar-mini
+  avatar($avatar-size-mini)
+  acronym, .fa
+    line-height: $avatar-size-mini
+    font-size: 11px
+    letter-spacing: -1px
+    text-indent: -1px
+    vertical-align: top
+
+.avatar-xs
+  avatar($avatar-size-xs)
+  acronym, .fa
+    line-height: $avatar-size-xs
+    font-size: 10px
+    letter-spacing: -1px
+    text-indent: -1px
+    vertical-align: top
+
+.avatar, .avatar-s, .avatar-t, .avatar-little, .avatar-mini, .avatar-xs
+  &.btn
+    padding: 0
+    vertical-align: baseline
+  .fa
+    font-size: 14px
+  acronym
+    text-transform: uppercase
+    font-family: $font
+    text-decoration: none
+  acronym, .fa
+    user-select: none
+    text-align: center
+    color: white
+    display: inline-block
+    height: 100%
+    width: 100%

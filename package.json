@@ -1,0 +1,97 @@
+{
+  "name": "react-oneteam",
+  "version": "0.0.0",
+  "description": "Oneteam specific React components",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint src test",
+    "start": "webpack-dev-server --progress",
+    "clean:lib": "if [ -d lib ]; then rm -rf lib; fi",
+    "clean:es": "if [ -d es ]; then rm -rf es; fi",
+    "clean:build": "npm run clean:lib && npm run clean:es",
+    "test": "NODE_PATH=node_modules:src BABEL_ENV=test ava -v",
+    "prebuild": "npm run clean:build",
+    "build:styl": "node ./script/stylus-compile",
+    "build:es": "BABEL_ENV=es babel -d es src && npm run build:styl -- -o es",
+    "build:commonjs": "BABEL_ENV=commonjs babel -d lib src && npm run build:styl -- -o lib",
+    "build": "npm run build:es && npm run build:commonjs",
+    "prepublish": "npm run lint && npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneteam-dev/react-oneteam.git"
+  },
+  "author": "Oneteam Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oneteam-dev/react-oneteam/issues"
+  },
+  "homepage": "https://github.com/oneteam-dev/react-oneteam#readme",
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register",
+      "babel-polyfill",
+      "./config/setup-browser-env.js",
+      "./config/ignore-styles.js"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-env": "^3.1.0",
+    "codecov": "^2.2.0",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.2.0",
+    "eslint-plugin-ava": "^4.2.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "ignore-styles": "^5.0.1",
+    "make-dir": "^1.0.0",
+    "minimist": "^1.2.0",
+    "nyc": "^11.0.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-ghfork": "^0.3.5",
+    "react-hot-loader": "3.0.0-beta.7",
+    "react-test-renderer": "^15.6.1",
+    "recursive-readdir": "^2.2.1",
+    "sinon": "^2.3.6",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "color-hash": "^1.0.3",
+    "react-bootstrap": "^0.31.0",
+    "react-fa": "^4.2.0",
+    "validator": "^8.0.0"
+  }
+}
