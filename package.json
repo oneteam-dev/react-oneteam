@@ -16,6 +16,7 @@
     "clean:es": "if [ -d es ]; then rm -rf es; fi",
     "clean:build": "npm run clean:lib && npm run clean:es",
     "test": "NODE_PATH=node_modules:src BABEL_ENV=test ava -v",
+    "test:coverage": "nyc npm test",
     "bundle:css": "node ./script/css-bundle",
     "prebuild": "npm run clean:build",
     "build:styl": "node ./script/stylus-compile",
@@ -34,6 +35,11 @@
     "url": "https://github.com/oneteam-dev/react-oneteam/issues"
   },
   "homepage": "https://github.com/oneteam-dev/react-oneteam#readme",
+  "nyc": {
+    "include": [
+      "src"
+    ]
+  },
   "ava": {
     "babel": "inherit",
     "require": [
