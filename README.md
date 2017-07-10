@@ -1,5 +1,8 @@
 # react-oneteam
 
+[![CircleCI](https://circleci.com/gh/oneteam-dev/react-oneteam.svg?style=svg&circle-token=7f3c581456263665cf3410297e9b9915a46f6635)](https://circleci.com/gh/oneteam-dev/react-oneteam)
+[![Codecov](https://codecov.io/gh/oneteam-dev/react-oneteam/branch/master/graph/badge.svg)](https://codecov.io/gh/oneteam-dev/react-oneteam)
+
 Oneteam specific React components
 
 ```bash
