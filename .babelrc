@@ -20,7 +20,7 @@
             "generateScopedName": "[hash:base64:16]"
           }
         ],
-        "./config/babel-plugin-transform-import-extension-styl-to-css"
+        "transform-import-extension-styl-to-css"
       ],
     },
     "commonjs": {
@@ -40,7 +40,7 @@
             }
           }
         ],
-        "./config/babel-plugin-transform-import-extension-styl-to-css"
+        "transform-import-extension-styl-to-css"
       ],
     }
   }
