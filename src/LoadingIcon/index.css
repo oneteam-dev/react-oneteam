@@ -1,0 +1,16 @@
+$size: 40px;
+
+.icon {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  background-size: auto $size;
+  background-repeat: no-repeat;
+  animation: loading 2s steps(55) infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position: -2200px 0; // ref: ./loading-sprites.png
+  }
+}

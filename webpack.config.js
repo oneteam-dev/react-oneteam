@@ -1,8 +1,8 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 
 const entry = [
   `webpack-dev-server/client?http://localhost:${PORT}`,
@@ -10,7 +10,7 @@ const entry = [
   'babel-polyfill',
   'react-hot-loader/patch',
   './example/index.js',
-]
+];
 
 const plugins = [
   new webpack.DefinePlugin({
@@ -20,7 +20,7 @@ const plugins = [
   }),
   new HtmlWebpackPlugin(),
   new webpack.HotModuleReplacementPlugin(),
-]
+];
 
 module.exports = {
   plugins,
@@ -50,9 +50,11 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true,
+              importLoaders: 1,
               localIdentName: '[path][name]__[local]___[hash:base64:4]',
             },
           },
+          'postcss-loader',
         ],
         include: path.resolve(__dirname, 'src'),
       },
@@ -62,12 +64,16 @@ module.exports = {
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader'
-      }
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/,
+        loader: 'url-loader',
+      },
     ],
   },
   devServer: {
