@@ -24,7 +24,7 @@
     "build:es": "BABEL_ENV=es babel -d es src && npm run build:styl -- -o es",
     "build:commonjs": "BABEL_ENV=commonjs babel -d lib src && npm run build:styl -- -o lib",
     "build": "npm run build:es && npm run build:commonjs && npm run bundle:css && npm run copy:images",
-    "prepublish": "npm run lint && npm test && npm run build"
+    "prepublishOnly": "npm run lint && npm test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -107,6 +107,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "color-hash": "^1.0.3",
+    "prop-types": "^15.5.10",
     "react-bootstrap": "^0.31.0",
     "react-fa": "^4.2.0",
     "validator": "^8.0.0"

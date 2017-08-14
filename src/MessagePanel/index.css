@@ -1,0 +1,25 @@
+.root {
+  max-width: 430px;
+  padding: 70px 40px 25px;
+  background: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+  border-radius: 3px;
+}
+
+.root p {
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+.body {
+  margin-bottom: 60px;
+}
+
+.footer {
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  text-align: right;
+}

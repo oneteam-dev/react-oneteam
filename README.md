@@ -46,12 +46,12 @@ module.exports = {
 
 // app.js
 
+import 'normalize.css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'react-oneteam/lib/react-oneteam.css';
 import React from 'react';
 import { render } from 'react-dom';
 import { Avatar, Mention } from 'react-oneteam';
-import 'react-oneteam/lib/react-oneteam.css';
 
 render(
   <div>
