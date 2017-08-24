@@ -1,7 +1,7 @@
 import test from 'ava';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Avatar from 'Avatar';
+import Avatar from '../../src/Avatar';
 
 test('Avatar snapshot testing', t => {
   const component = renderer.create(

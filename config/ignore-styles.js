@@ -1,2 +1,2 @@
 import register from 'ignore-styles';
-register(['.css', '.styl']);
+register(['.css', '.styl', '.jpg', '.png', '.gif', '.svg']);

@@ -46,7 +46,6 @@ module.exports = {
 
 // app.js
 
-import 'normalize.css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-oneteam/lib/react-oneteam.css';
 import React from 'react';
