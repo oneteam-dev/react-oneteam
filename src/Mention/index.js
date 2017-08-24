@@ -16,12 +16,14 @@ export const replaceMentions = (string, mentions) => {
   });
 };
 export const userMentionType = PropTypes.shape({
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   userName: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   avatarURL: PropTypes.string,
 });
 export const groupMentionType = PropTypes.shape({
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   groupName: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   avatarURL: PropTypes.string,
