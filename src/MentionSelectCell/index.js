@@ -11,14 +11,12 @@ const MentionSelectCell = props => {
     name,
     username,
     email,
+    isFocused, // eslint-disable-line no-unused-vars, react/prop-types
     ...rest
   } = props;
 
   return (
-    <div
-      {...rest}
-      className={classnames(styles.cell, className)}
-    >
+    <div {...rest} className={classnames(styles.cell, className)}>
       <Avatar className={styles.avatar} user={user} size='tiny' tooltip={false} />
       <div className={styles.text}>
         <div>
