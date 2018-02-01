@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 import Ribbon from 'react-github-fork-ribbon';
 import { Button } from 'react-bootstrap';
-import { Avatar, Mention, LoadingIcon, MessagePanel } from '../src';
+import { Avatar, Mention, LoadingIcon, MessagePanel, MentionSelectCell } from '../src';
 import styles from './App.css';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div className={styles.root}>
         <Ribbon href='https://github.com/oneteam-dev/react-oneteam'>
           Fork me on GitHub
         </Ribbon>
+        <h1>react-oneteam</h1>
         <div className={styles.section}>
           <span>Ávatar: </span>
           <Avatar
@@ -39,7 +41,21 @@ export default class App extends Component {
             </MessagePanel.Footer>
           </MessagePanel>
         </div>
+        <div className={styles.section}>
+          <span>MentionSelectCell: </span>
+          <MentionSelectCell
+            user={{
+              name: 'sugarshin',
+              profile_photo: { thumbnail_url: null },
+            }}
+            name='Shingo Sato'
+            username='sugarshin'
+            email='shingo.sato@oneteam.co.jp'
+          />
+        </div>
       </div>
     );
   }
 }
+
+export default hot(module)(App);
