@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Icon from 'react-fa';
+import { Icon } from 'react-fa';
 import PropTypes from 'prop-types';
-import isHalfWidth from 'validator/lib/isHalfWidth';
+import { isHalfWidth } from 'validator';
 import ColorHash from 'color-hash';
 import classnames from 'classnames';
 import OverlayPopover from '../OverlayPopover';

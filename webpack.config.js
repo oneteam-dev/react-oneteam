@@ -5,10 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PORT = process.env.PORT || 8080;
 
 const entry = [
-  `webpack-dev-server/client?http://localhost:${PORT}`,
-  'webpack/hot/only-dev-server',
   'babel-polyfill',
-  'react-hot-loader/patch',
   './example/index.js',
 ];
 
@@ -19,6 +16,7 @@ const plugins = [
     },
   }),
   new HtmlWebpackPlugin(),
+  new webpack.NamedModulesPlugin(),
   new webpack.HotModuleReplacementPlugin(),
 ];
 
