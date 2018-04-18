@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './index.css';
 
-export const getRegex = () => /@([a-z][0-9a-z-_]+(?:\:([a-z][0-9a-z-]+))?)/g; // eslint-disable-line no-useless-escape
+export const getRegex = () => /@([a-z][0-9a-z-_]*(?:\:([a-z][0-9a-z-]+))?)/g; // eslint-disable-line no-useless-escape
 export const replaceMentions = (string, mentions) => {
   return string.replace(getRegex(), (match, mentionName, teamName) => {
     const mention = mentions.find(m => [m.userName, m.groupName].includes(mentionName));
