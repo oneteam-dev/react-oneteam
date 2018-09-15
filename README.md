@@ -61,6 +61,10 @@ render(
 );
 ```
 
+## Release new version
+
+Merge to master branch, will publish to npm and tagging by Git if `version` in package.json bumped.
+
 ## License
 
 [MIT](https://github.com/oneteam-dev/react-oneteam/blob/master/LICENSE)
