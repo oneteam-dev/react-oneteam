@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Tests and Coverage report
           command: |
-            npm run test:coverage && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov
+            npm run test:coverage && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov
       - save_cache: *save_yarn_cache
   publish:
     <<: *defaults
