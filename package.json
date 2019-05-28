@@ -73,7 +73,6 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^3.3.7",
     "browser-env": "^3.2.4",
-    "codecov": "^3.0.0",
     "concat": "^1.0.3",
     "css-loader": "^0.28.9",
     "eslint": "^4.16.0",
