@@ -109,6 +109,6 @@
     "prop-types": "^15.5.10",
     "react-bootstrap": "^0.32.1",
     "react-fa": "^5.0.0",
-    "validator": "^9.4.0"
+    "validator": "^13.7.0"
   }
 }
